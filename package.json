@@ -1,0 +1,16 @@
+{
+  "name": "cubejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "bin": "app.js",
+  "scripts": {
+    "dev": "cubejs-server"
+  },
+  "devDependencies": {
+    "@cubejs-backend/server": "^0.28.39"
+  },
+  "dependencies": {
+    "@cubejs-backend/postgres-driver": "^0.28.39"
+  }
+}
