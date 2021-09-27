@@ -5,5 +5,5 @@ module.exports = {
           refreshKeyRenewalThreshold: 4,
         }
     },
-    processSubscriptionsInterval:5,
+    processSubscriptionsInterval:2,
 };

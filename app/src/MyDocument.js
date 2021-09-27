@@ -5,12 +5,19 @@ import cubejs from '@cubejs-client/core';
 import WebSocketTransport from '@cubejs-client/ws-transport';
 import 'antd/dist/antd.css';
 
-const cubejsApi = cubejs({
-  transport: new WebSocketTransport({
-    authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzI2Njc5NzcsImV4cCI6MTYzMjc1NDM3N30.ki5AokHM6cgRAK7XUaZbOk27PDzu0vPRImzM442eoM0",
-    apiUrl: 'ws://localhost:4000/cubejs-api/v1',
-  }),
-});
+// const cubejsApi = cubejs({
+//   transport: new WebSocketTransport({
+//     authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzI2Njc5NzcsImV4cCI6MTYzMjc1NDM3N30.ki5AokHM6cgRAK7XUaZbOk27PDzu0vPRImzM442eoM0",
+//     apiUrl: 'ws://localhost:4000/cubejs-api/v1',
+//   }),
+// });
+
+
+const cubejsApi = cubejs(
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzI2Njc5NzcsImV4cCI6MTYzMjc1NDM3N30.ki5AokHM6cgRAK7XUaZbOk27PDzu0vPRImzM442eoM0",
+    {apiUrl: 'http://localhost:4000/cubejs-api/v1'}
+);
+
 
 function Demo() {
   const { resultSet, isLoading, error, progress } = useCubeQuery(
